@@ -14,6 +14,7 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "crud-example": "file:",
     "express": "^5.1.0",
     "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.7",

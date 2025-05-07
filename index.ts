@@ -8,15 +8,26 @@ const app = express();
 
 // Configuración de CORS
 const corsOptions = {
-  origin: ['https://sigabefront-three.vercel.app', 'http://localhost:3000'],
+  origin: [
+    'https://sigabefront-three.vercel.app',
+    'https://sigabefrontreal-pjphknn8q-manuels-projects-d56bc952.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: true,
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/api/books', bookRoutes); // Añadido prefijo /api para mejor organización
+
+// Ruta de verificación de salud
+app.get('/health', (_, res) => {
+  res.send('OK');
+});
 
 // Inicializar la conexión con la base de datos
 AppDataSource.initialize()
