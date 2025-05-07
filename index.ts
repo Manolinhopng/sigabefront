@@ -11,6 +11,7 @@ const corsOptions = {
   origin: [
     'https://sigabefront-three.vercel.app',
     'https://sigabefrontreal-pjphknn8q-manuels-projects-d56bc952.vercel.app',
+    'https://sigabefrontreal.vercel.app/create',
     'http://localhost:3000',
     'http://localhost:5173'
   ],
