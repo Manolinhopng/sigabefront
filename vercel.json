@@ -13,7 +13,7 @@
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://tu-url-frontend.vercel.app"
+          "value": "https://sigabefrontreal.vercel.app"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -29,23 +29,11 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "index.ts",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept",
-        "Access-Control-Allow-Credentials": "true"
-      }
+      "dest": "index.ts"
     },
     {
       "src": "/(.*)",
-      "dest": "index.ts",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept",
-        "Access-Control-Allow-Credentials": "true"
-      }
+      "dest": "index.ts"
     }
   ]
 }
