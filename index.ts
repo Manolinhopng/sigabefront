@@ -3,16 +3,16 @@ import express from "express";
 import { AppDataSource } from "./src/data-source";
 import bookRoutes from "./src/routes/bookRoutes";
 import cors from "cors";
-
+import dotenv from 'dotenv'
 const app = express();
+
+
+dotenv.config()
 
 const allowedOrigins =
   process.env.NODE_ENV === "production"
     ? [
-        "https://sigabefront-three.vercel.app",
-        "https://sigabefrontreal-pjphknn8q-manuels-projects-d56bc952.vercel.app",
         "https://sigabefrontreal.vercel.app",
-        "https://sigabefront.vercel.app",
       ]
     : ["http://localhost:3000", "http://localhost:5173"];
 
